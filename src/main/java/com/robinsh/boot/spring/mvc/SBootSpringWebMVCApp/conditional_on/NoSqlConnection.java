@@ -1,0 +1,18 @@
+package com.robinsh.boot.spring.mvc.SBootSpringWebMVCApp.conditional_on;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConditionalOnProperty(prefix = "sqlconnection", value = "enabled", havingValue = "false", matchIfMissing = false)
+public class NoSqlConnection implements DBConnection{
+
+    public NoSqlConnection () {
+        System.out.println("I'm a NoSqlConnection Constructor!");
+        System.out.println("-----------------------------------------------------------------------------------------");
+    }
+    @Override
+    public void connect() {
+        System.out.println("I am connecting to NoSQL Database !");
+    }
+}
