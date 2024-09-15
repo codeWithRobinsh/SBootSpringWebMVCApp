@@ -1,0 +1,16 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+    <head>
+        <title>Annotated Output Page</title>
+    </head>
+    <body style="background:powderblue">
+        <h1 align="center">SPRING WEB MVC APPLICATION OUTPUT</h1>
+        <div align="center">
+            <h2>Trip Details</h2>
+            <h3 th:text=${message}></h3>
+            <h3>Full Name:<p th:text=${fn}></p></h3>
+            <h3>Next Destination:<p th:text=${destination}></p></h3>
+            <img src="https://images.pexels.com/photos/8849702/pexels-photo-8849702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Girl in a jacket" width="500" height="600">
+            <h3>! H A P P Y - J O U R N E Y !</h3>
+        </div>
+    </body>
+</html>
